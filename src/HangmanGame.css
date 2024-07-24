@@ -1,0 +1,85 @@
+.hangman-container{
+    text-align: center;
+    padding: 20px;
+    background-color: lightcoral;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+}
+
+h1{
+    color: black;
+}
+
+.word-display{
+    margin: 20px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.letter{
+    margin: 0 5px;
+    font-size: 24px;
+    display: inline-block;
+    border-bottom: 2px solid blue;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.letter.gussed{
+    color: skyblue;
+    border-bottom: 2px solid skyblue;
+}
+
+.keyboard{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 10px;
+}
+
+.result-message{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: blue;
+}
+
+.keyboard button{
+    font-size: 18px;
+    padding: 10px 15px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.keyboard button:disabled{
+    background-color: grey;
+    
+    cursor: not-allowed;
+}
+
+.keyboard button:hover{
+    background-color: grey;
+}
+
+.new-game-button{
+    font-size: 18px;
+    padding: 10px 15px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.new-game-button:hover{
+    background-color: purple;
+}
+
