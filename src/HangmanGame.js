@@ -13,7 +13,7 @@ const HangmanGame = () => {
 
 	useEffect(() => {
 		resetGame();
-	}, []);
+	}, [resetGame()]);
 
 	const chooseRandomWord = () => {
 		const randomIndex = Math.floor(Math.random() * words.length);
