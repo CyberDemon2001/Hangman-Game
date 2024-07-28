@@ -1,8 +1,8 @@
-// HangmanGame.js
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+// import { useEffect } from "react";
 import HangmanCanvas from "./HangmanCanvas";
-import "./HangmanGame.css"; // Import the additional CSS file
+import "./HangmanGame.css";
 
 const words = ["REACT", "JAVASCRIPT", "DEVELOPER", "HANGMAN", "COMPONENT"];
 
@@ -11,9 +11,16 @@ const HangmanGame = () => {
 	const [guessedLetters, setGuessedLetters] = useState([]);
 	const [mistakes, setMistakes] = useState(0);
 
-	useEffect(() => {
-		resetGame();
-	}, [resetGame()]);
+
+	const resetGame = () => {
+		setWord(chooseRandomWord());
+		setGuessedLetters([]);
+		setMistakes(0);
+	};
+
+	// useEffect(() => {
+	// 	resetGame();
+	// }, [resetGame()]);
 
 	const chooseRandomWord = () => {
 		const randomIndex = Math.floor(Math.random() * words.length);
@@ -39,11 +46,7 @@ const HangmanGame = () => {
 		return mistakes >= 6;
 	};
 
-	const resetGame = () => {
-		setWord(chooseRandomWord());
-		setGuessedLetters([]);
-		setMistakes(0);
-	};
+	
 
 	return (
 		<div className="hangman-container">
